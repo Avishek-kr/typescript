@@ -62,12 +62,7 @@
 //classes
 
 class Point{
-   private x:number;
-   private y: number;
-
-    constructor(x?:number, y?:number){
-        this.x=x;
-        this.y=y;
+    constructor(public x?:number,private y?:number){
     }
 
     draw(){
@@ -77,7 +72,7 @@ class Point{
 
 let point  = new Point(1,2);
 point.x=1;
-point.y=2
+point.y=2;
 point.draw();
 
 
