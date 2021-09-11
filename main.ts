@@ -34,3 +34,11 @@ message='abc';
 // two ways
 let endWithC= (<String>message).endsWith('c');
 let alternateC= (message as string).endsWith('c');
+
+// arrow function
+
+let log= function (message){
+    console.log(message);
+}
+
+let doLog=(message)=>console.log(message);
