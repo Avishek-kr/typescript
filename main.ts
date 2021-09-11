@@ -1,8 +1,27 @@
 function doSomething (){
-    for (var i=0; i<5; i++){
+    for (let i=0; i<5; i++){
         console.log(i)
     }
     console.log('Finally' + i)
 }
 
 doSomething()
+
+// types
+
+let count = 5;
+count = 'a' //this in not right
+
+let a: number ;
+let b: boolean;
+
+// and so on
+
+// now see enum type 
+
+const ColorRed = 0;
+const ColorGreen = 1;
+const ColorBlue = 2;
+
+enum Color{Red=0, Greeen=1, Blue=2};
+let BackgroundColor= Color.Red
