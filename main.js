@@ -1,25 +1,58 @@
-function doSomething() {
-    for (var i = 0; i < 5; i++) {
-        console.log(i);
-    }
-    console.log('Finally' + i);
-}
-doSomething();
+// function doSomething (){
+//     for (let i=0; i<5; i++){
+//         console.log(i)
+//     }
+//     console.log('Finally' + i)
+// }
+// doSomething()
 // types
-var count = 5;
-count = 'a'; //this in not right
-var a;
-var b;
+// let count = 5;
+// count = 'a' //this in not right
+// let a: number ;
+// let b: boolean;
 // and so on
 // now see enum type 
-var ColorRed = 0;
-var ColorGreen = 1;
-var ColorBlue = 2;
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Greeen"] = 1] = "Greeen";
-    Color[Color["Blue"] = 2] = "Blue";
-})(Color || (Color = {}));
-;
-var BackgroundColor = Color.Red;
+// const ColorRed = 0;
+// const ColorGreen = 1;
+// const ColorBlue = 2;
+// enum Color{Red=0, Greeen=1, Blue=2};
+// let BackgroundColor= Color.Red
+// type assertion
+// let message;
+// message='abc';
+// // two ways
+// let endWithC= (<String>message).endsWith('c');
+// let alternateC= (message as string).endsWith('c');
+// arrow function
+// let log= function (message){
+//     console.log(message);
+// }
+// let doLog=(message)=>console.log(message);
+// interfaces
+// interface Point {
+//     x:number,
+//     y:number
+// }
+// let drawPoint=(point:Point)=>{
+//     // ..
+// }
+// drawPoint=({
+//     x:1,
+//     y:2
+// })
+//classes
+var Point = /** @class */ (function () {
+    function Point() {
+    }
+    Point.prototype.draw = function () {
+        console.log("X" + this.x + ', Y:' + this.y);
+    };
+    Point.prototype.getDistance = function (another) {
+        // ..
+    };
+    return Point;
+}());
+var point = new Point();
+point.x = 1;
+point.y = 2;
+point.draw();
