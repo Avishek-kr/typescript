@@ -42,3 +42,19 @@ let log= function (message){
 }
 
 let doLog=(message)=>console.log(message);
+
+// interfaces
+
+interface Point {
+    x:number,
+    y:number
+}
+
+let drawPoint=(point:Point)=>{
+    // ..
+}
+
+drawPoint=({
+    x:1,
+    y:2
+})
