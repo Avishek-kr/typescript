@@ -25,3 +25,12 @@ const ColorBlue = 2;
 
 enum Color{Red=0, Greeen=1, Blue=2};
 let BackgroundColor= Color.Red
+
+// type assertion
+
+let message;
+message='abc';
+
+// two ways
+let endWithC= (<String>message).endsWith('c');
+let alternateC= (message as string).endsWith('c');
